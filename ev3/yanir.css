@@ -1,0 +1,13 @@
+#main-header:after {
+    background-image: url(header.jpg);
+}
+
+.cta-container {
+    max-width: none;
+}
+
+.ev3-tracker {
+    display: block;
+    width: 100%;
+    margin: 20px;
+}

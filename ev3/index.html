@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Yanir's Mindstorms EV3 tracker</title>
+        
+        <!-- Meta -->
+        <meta name="description" content="Coming soon!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Dor Kleiman">
+
+        <!-- Google Author link -->
+        <link rel="author" href="https://plus.google.com/112139137835193833820"/>
+
+        <!-- CSS, Normalize First, minify for production -->
+        <link rel="stylesheet" type='text/css' href="../less/master.css"/>
+        <link rel="stylesheet" type='text/css' href="yanir.css"/>
+        
+        <!-- Import web fonts using the link tag instead of CSS @import -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+        
+        <!-- Icons from http://fontawesome.io/ -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+                
+    </head>
+
+    <body>
+        
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p>
+        <![endif]-->
+
+        
+        <!-- Header -->
+        <header id="main-header">
+            <div class="container">
+                <h1>Mindstorms EV3</h1>
+                <p>Coming soon.</p>
+            </div>
+        </header>
+        
+        
+        <!-- First call to action -->
+        <section class="call-to-action">
+            <div class="cta-container cf">
+            <img src="state.png" class="ev3-tracker">
+            </div>
+        </section>
+        
+        
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="social-boat">
+                    <div class="gplus">
+                        <!-- Place this tag where you want the +1 button to render. -->
+                        <div class="g-plusone"></div>
+
+                        <!-- Place this tag after the last +1 button tag. -->
+                        <script type="text/javascript">
+                            (function() {
+                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                po.src = 'https://apis.google.com/js/plusone.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                            })();
+                        </script>
+                        </div>
+                    <div class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+                    <div class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+                <div id="footer-text" class="small">
+                <p>&copy; Dor Kleiman 2013 | Design by <a href="http://www.eatapapaya.com" target="_blank">Papaya</a> | Hosted on <a href="http://pages.github.com/">GitHub Pages</a></p>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Reference jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        
+        <!-- Reference Javascript, minify for production -->
+        <script type="text/javascript" src="js/jquery.event.move.js"></script>
+        <script type="text/javascript" src="js/jquery.event.swipe.js"></script>
+        <script type="text/javascript" src="js/unslider.js"></script>
+        
+        <!-- Unslider script -->
+        <script>
+            $(document).ready(function () {
+                var unslider = $('.slider').unslider();
+                $('.unslider-arrow').click(function(event) {
+                    event.preventDefault();
+                    if ($(this).hasClass('next')) {
+                        unslider.data('unslider')['next']();  
+                    } else {
+                        unslider.data('unslider')['prev']();  
+                    };
+                });
+                var unslider = $('.slider').unslider();
+
+                unslider.on('movestart', function(e) {
+                    if((e.distX > e.distY && e.distX < -e.distY) || (e.distX < e.distY &&   e.distX > -e.distY)) {
+                        e.preventDefault();
+                    }
+                });
+        });
+        </script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-46499418-1', 'misado.net');
+            ga('send', 'pageview');
+        </script>
+        
+    </body>
+
+</html>

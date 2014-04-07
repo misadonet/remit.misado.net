@@ -1,3 +1,9 @@
+@media screen and (max-width: 850px) {
+    h1 {
+        font-size: 3em;
+    }
+}
+
 #main-header:after {
     background-image: url(header.jpg);
 }
